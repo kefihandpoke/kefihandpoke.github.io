@@ -21,6 +21,8 @@
     .container {
       padding: 40px 25px;
       max-width: 500px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -32,11 +34,14 @@
     p {
       font-size: 16px;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
-    a {
-      display: inline-block;
+    .language {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 12px 0;
       padding: 16px 28px;
       border: 1px solid #33231A;
       color: #33231A;
@@ -45,9 +50,16 @@
       font-size: 14px;
     }
 
-    a:hover {
+    .language:hover {
       background: #33231A;
       color: #F1E5CE;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -63,9 +75,21 @@
       OR ASK A QUESTION
     </p>
 
-    <a href="mailto:kefihandpoke@hotmail.com?subject=Tattoo%20Booking%20%E2%80%A2%20Questions%20-%20Kefi%20Handpoke&body=Hello%20Kefi%2C%0A%0AI%20would%20love%20to%20get%20a%20tattoo%20with%20you%20or%20clarify%20some%20doubts.%0A%0AHere%20are%20my%20details%2C%0A%0ACity%20where%20I%20would%20like%20to%20get%20tattooed%3A%0AMy%20name%3A%0AMy%20Instagram%3A%0AMy%20email%3A%0AMy%20availability%20%28days%20and%20times%29%3A%0A%0A%E2%80%A2%20I%20would%20like%20to%20describe%20my%20tattoo%20idea%20in%20detail%3A%0A%E2%80%A2%20I%20would%20like%20to%20share%20the%20story%20behind%20the%20tattoo%20or%20what%20inspires%20me%20to%20get%20it%3A%0A%0APlacement%20on%20the%20body%3A%0ATattoo%20size%20%28in%20cm%29%3A">
-      OPEN EMAIL
-    </a>
+    <div>
+      <a class="language"
+         href="mailto:kefihandpoke@hotmail.com?subject=Tattoo%20Booking%20%E2%80%A2%20Questions%20-%20Kefi%20Handpoke&body=Hello%20Kefi%2C%0A%0AI%20would%20love%20to%20get%20a%20tattoo%20with%20you%20or%20clarify%20some%20doubts.%0A%0AHere%20are%20my%20details%2C%0A%0ACity%20where%20I%20would%20like%20to%20get%20tattooed%3A%0AMy%20name%3A%0AMy%20Instagram%3A%0AMy%20email%3A%0AMy%20availability%20%28days%20and%20times%29%3A%0A%0A%E2%80%A2%20I%20would%20like%20to%20describe%20my%20tattoo%20idea%20in%20detail%3A%0A%E2%80%A2%20I%20would%20like%20to%20share%20the%20story%20behind%20the%20tattoo%20or%20what%20inspires%20me%20to%20get%20it%3A%0A%0APlacement%20on%20the%20body%3A%0ATattoo%20size%20%28in%20cm%29%3A">
+        ENGLISH
+      </a>
+
+      <a class="language"
+         href="mailto:kefihandpoke@hotmail.com?subject=Marca%C3%A7%C3%A3o%20de%20Tattoo%20%E2%80%A2%20D%C3%BAvidas%20-%20Kefi%20Handpoke&body=Ol%C3%A1%20Kefi%2C%0A%0AGostaria%20de%20fazer%20uma%20tatuagem%20contigo%20ou%20esclarecer%20algumas%20d%C3%BAvidas.%0A%0AAqui%20est%C3%A3o%20os%20meus%20dados%3A%0A%0ACidade%20onde%20gostaria%20de%20fazer%20a%20tatuagem%3A%0ANome%3A%0AInstagram%3A%0AEmail%3A%0ADisponibilidade%20%28dias%20e%20hor%C3%A1rios%29%3A%0A%0A%E2%80%A2%20Gostaria%20de%20descrever%20a%20minha%20ideia%20de%20tatuagem%20em%20detalhe%3A%0A%E2%80%A2%20Gostaria%20de%20partilhar%20a%20hist%C3%B3ria%20por%20tr%C3%A1s%20da%20tatuagem%20ou%20o%20que%20me%20inspira%20a%20faz%C3%AA-la%3A%0A%0ALocaliza%C3%A7%C3%A3o%20no%20corpo%3A%0ATamanho%20da%20tatuagem%20%28em%20cm%29%3A">
+        PORTUGUÊS
+      </a>
+    </div>
+
+    <div class="footer">
+      CHOOSE YOUR LANGUAGE
+    </div>
 
   </div>
 
