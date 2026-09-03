@@ -7,52 +7,93 @@
   <title>Kefi Handpoke • Booking</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+
       background: #F1E5CE;
-      font-family: Arial, sans-serif;
       color: #33231A;
+
+      font-family: Arial, sans-serif;
       text-align: center;
     }
 
     .container {
-      padding: 40px 25px;
-      max-width: 500px;
       width: 100%;
-      box-sizing: border-box;
+      max-width: 500px;
+      padding: 45px 28px;
+    }
+
+
+    /* -------------------------
+       LOGO
+    ------------------------- */
+
+    .flower {
+      display: block;
+      width: 92px;
+      height: auto;
+
+      margin: 0 auto 22px;
     }
 
     h1 {
+      margin: 0;
+
       font-size: 28px;
-      letter-spacing: 3px;
-      margin: 0 0 15px;
+      line-height: 1.2;
       font-weight: 500;
+
+      letter-spacing: 3px;
     }
 
+
+    /* -------------------------
+       INTRO
+    ------------------------- */
+
     .intro {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 35px;
+      margin-top: 18px;
+      margin-bottom: 38px;
+
+      font-size: 15px;
+      line-height: 1.7;
+
+      letter-spacing: 1px;
     }
+
+
+    /* -------------------------
+       LANGUAGE BUTTONS
+    ------------------------- */
 
     .language {
       display: block;
+
       width: 100%;
-      box-sizing: border-box;
+      padding: 16px 25px;
       margin: 12px 0;
-      padding: 16px 28px;
+
       border: 1px solid #33231A;
       background: transparent;
+
       color: #33231A;
       text-decoration: none;
-      letter-spacing: 2px;
-      font-size: 14px;
-      cursor: pointer;
+
       font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
     }
 
     .language:hover {
@@ -60,31 +101,77 @@
       color: #F1E5CE;
     }
 
+
+    /* -------------------------
+       FALLBACK
+    ------------------------- */
+
+    .fallback-trigger {
+      display: inline-block;
+
+      margin-top: 28px;
+
+      border: none;
+      background: transparent;
+
+      color: #33231A;
+
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      cursor: pointer;
+
+      opacity: 0.7;
+    }
+
+    .fallback-trigger:hover {
+      opacity: 1;
+    }
+
+
+    /* -------------------------
+       ALTERNATIVE OPTIONS
+    ------------------------- */
+
     .options {
       display: none;
-      margin-top: 30px;
+
+      margin-top: 28px;
     }
 
     .options-title {
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+
+      font-size: 10px;
+      letter-spacing: 1.8px;
+
+      opacity: 0.75;
     }
 
     .option {
       display: block;
+
       width: 100%;
-      box-sizing: border-box;
-      margin: 10px 0;
       padding: 14px 20px;
+      margin: 9px 0;
+
       border: 1px solid #33231A;
       background: transparent;
+
       color: #33231A;
       text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      cursor: pointer;
+
       font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
     }
 
     .option:hover {
@@ -94,109 +181,170 @@
 
     .back {
       border: none;
-      margin-top: 12px;
-      font-size: 11px;
-      letter-spacing: 1.5px;
+      margin-top: 8px;
       text-decoration: underline;
-    }
-
-    .footer {
-      margin-top: 35px;
-      font-size: 11px;
-      letter-spacing: 1.5px;
+      text-underline-offset: 3px;
+      font-size: 10px;
       opacity: 0.7;
     }
 
+
+    /* -------------------------
+       COPY MESSAGE
+    ------------------------- */
+
     #copyMessage {
       display: none;
+
       margin-top: 12px;
-      font-size: 11px;
+
+      font-size: 10px;
       letter-spacing: 1px;
     }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    .footer {
+      margin-top: 38px;
+
+      font-size: 9px;
+      letter-spacing: 1.8px;
+
+      opacity: 0.55;
+    }
+
+
+    /* -------------------------
+       MOBILE
+    ------------------------- */
+
+    @media (max-width: 400px) {
+
+      .container {
+        padding: 35px 22px;
+      }
+
+      .flower {
+        width: 82px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 25px;
+        letter-spacing: 2.5px;
+      }
+
+      .intro {
+        font-size: 14px;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <div class="container">
+  <main class="container">
 
-    <h1>KEFI HANDPOKE</h1>
+    <!-- FLOWER LOGO -->
+
+    <img
+      src="flower.png"
+      alt="Kefi Handpoke"
+      class="flower"
+    >
+
+
+    <!-- NAME -->
+
+    <h1>
+      KEFI HANDPOKE
+    </h1>
+
+
+    <!-- INTRO -->
 
     <div class="intro">
       BOOK A TATTOO<br>
       OR ASK A QUESTION
     </div>
 
-    <!-- LANGUAGE SELECTION -->
 
-    <div id="languageSelection">
+    <!--
+      IMPORTANT:
+      These two links use MAILTO directly.
+      This means the phone/tablet/computer decides
+      which email application should open.
+    -->
 
-      <button class="language" onclick="chooseLanguage('en')">
-        ENGLISH
-      </button>
-
-      <button class="language" onclick="chooseLanguage('pt')">
-        PORTUGUÊS
-      </button>
-
-    </div>
+    <a
+      class="language"
+      href="mailto:kefihandpoke@hotmail.com?subject=Tattoo%20Booking%20%E2%80%A2%20Questions%20-%20Kefi%20Handpoke&body=Hello%20Kefi%2C%0A%0AI%20would%20love%20to%20get%20a%20tattoo%20with%20you%20or%20clarify%20some%20doubts.%0A%0AHere%20are%20my%20details%2C%0A%0ACity%20where%20I%20would%20like%20to%20get%20tattooed%3A%0AMy%20name%3A%0AMy%20Instagram%3A%0AMy%20email%3A%0AMy%20availability%20(days%20and%20times)%3A%0A%0A%E2%80%A2%20I%20would%20like%20to%20describe%20my%20tattoo%20idea%20in%20detail%3A%0A%E2%80%A2%20I%20would%20like%20to%20share%20the%20story%20behind%20the%20tattoo%20or%20what%20inspires%20me%20to%20get%20it%3A%0A%0APlacement%20on%20the%20body%3A%0ATattoo%20size%20(in%20cm)%3A"
+    >
+      ENGLISH
+    </a>
 
 
-    <!-- EMAIL OPTIONS -->
+    <a
+      class="language"
+      href="mailto:kefihandpoke@hotmail.com?subject=Marca%C3%A7%C3%A3o%20de%20Tattoo%20%E2%80%A2%20D%C3%BAvidas%20-%20Kefi%20Handpoke&body=Ol%C3%A1%20Kefi%2C%0A%0AGostaria%20de%20fazer%20uma%20tatuagem%20contigo%20ou%20esclarecer%20algumas%20d%C3%BAvidas.%0A%0AAqui%20est%C3%A3o%20os%20meus%20dados%3A%0A%0ACidade%20onde%20gostaria%20de%20fazer%20a%20tatuagem%3A%0ANome%3A%0AInstagram%3A%0AEmail%3A%0ADisponibilidade%20%28dias%20e%20hor%C3%A1rios%29%3A%0A%0A%E2%80%A2%20Gostaria%20de%20descrever%20a%20minha%20ideia%20de%20tatuagem%20em%20detalhe%3A%0A%E2%80%A2%20Gostaria%20de%20partilhar%20a%20hist%C3%B3ria%20por%20tr%C3%A1s%20da%20tatuagem%20ou%20o%20que%20me%20inspira%20a%20faz%C3%AA-la%3A%0A%0ALocaliza%C3%A7%C3%A3o%20no%20corpo%3A%0ATamanho%20da%20tatuagem%20%28em%20cm%29%3A"
+    >
+      PORTUGUÊS
+    </a>
 
-    <div id="emailOptions" class="options">
+
+    <!--
+      FALLBACK OPTION
+      This does NOT interfere with the direct email buttons.
+    -->
+
+    <button
+      class="fallback-trigger"
+      onclick="showOptions()"
+    >
+      HAVING TROUBLE OPENING YOUR EMAIL?
+    </button>
+
+
+    <!-- ALTERNATIVE EMAIL OPTIONS -->
+
+    <div
+      id="options"
+      class="options"
+    >
 
       <div class="options-title">
-        CHOOSE HOW TO SEND YOUR EMAIL
+        CHOOSE ANOTHER WAY TO SEND YOUR EMAIL
       </div>
-
-      <!-- APPLE MAIL / DEFAULT EMAIL APP -->
-
-      <a
-        id="mailApp"
-        class="option"
-        href="#"
-      >
-        ✉ &nbsp; OPEN EMAIL APP
-      </a>
 
 
       <!-- GMAIL -->
 
       <a
-        id="gmail"
+        id="gmailLink"
         class="option"
         href="#"
         target="_blank"
         rel="noopener"
       >
-        GMAIL
+        OPEN WITH GMAIL
       </a>
 
 
       <!-- OUTLOOK -->
 
       <a
-        id="outlook"
+        id="outlookLink"
         class="option"
         href="#"
         target="_blank"
         rel="noopener"
       >
-        OUTLOOK
-      </a>
-
-
-      <!-- BROWSER -->
-
-      <a
-        id="browserMail"
-        class="option"
-        href="#"
-        target="_blank"
-        rel="noopener"
-      >
-        OPEN EMAIL IN BROWSER
+        OPEN WITH OUTLOOK
       </a>
 
 
@@ -209,6 +357,7 @@
         COPY EMAIL ADDRESS
       </button>
 
+
       <div id="copyMessage">
         EMAIL ADDRESS COPIED
       </div>
@@ -218,7 +367,7 @@
 
       <button
         class="option back"
-        onclick="goBack()"
+        onclick="hideOptions()"
       >
         ← BACK
       </button>
@@ -227,18 +376,20 @@
 
 
     <div class="footer">
-      CHOOSE YOUR LANGUAGE
+      KEFI HANDPOKE
     </div>
 
-  </div>
+  </main>
 
 
   <script>
 
     const email = "kefihandpoke@hotmail.com";
 
+
     const englishSubject =
       "Tattoo Booking • Questions - Kefi Handpoke";
+
 
     const portugueseSubject =
       "Marcação de Tattoo • Dúvidas - Kefi Handpoke";
@@ -284,25 +435,54 @@ Localização no corpo:
 Tamanho da tatuagem (em cm):`;
 
 
+    /*
+      We use English as the default
+      for the alternative email buttons.
+    */
+
     let currentLanguage = "en";
 
 
-    function chooseLanguage(language) {
+    function showOptions() {
 
-      currentLanguage = language;
+      document.getElementById("options").style.display = "block";
 
-      document.getElementById("languageSelection").style.display = "none";
-      document.getElementById("emailOptions").style.display = "block";
+      document.querySelector(".fallback-trigger").style.display = "none";
 
-      const subject =
-        language === "en"
-          ? englishSubject
-          : portugueseSubject;
 
-      const body =
-        language === "en"
-          ? englishBody
-          : portugueseBody;
+      updateAlternativeLinks();
+
+    }
+
+
+    function hideOptions() {
+
+      document.getElementById("options").style.display = "none";
+
+      document.querySelector(".fallback-trigger").style.display = "inline-block";
+
+      document.getElementById("copyMessage").style.display = "none";
+
+    }
+
+
+    function updateAlternativeLinks() {
+
+      let subject;
+      let body;
+
+
+      if (currentLanguage === "pt") {
+
+        subject = portugueseSubject;
+        body = portugueseBody;
+
+      } else {
+
+        subject = englishSubject;
+        body = englishBody;
+
+      }
 
 
       const encodedSubject =
@@ -313,77 +493,123 @@ Tamanho da tatuagem (em cm):`;
 
 
       /*
-        APPLE MAIL / DEFAULT EMAIL APP
-      */
-
-      const mailto =
-        `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
-
-      document.getElementById("mailApp").href = mailto;
-
-
-      /*
-        GMAIL
+        GMAIL WEB
       */
 
       const gmailURL =
-        `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodedSubject}&body=${encodedBody}`;
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=" + encodeURIComponent(email) +
+        "&su=" + encodedSubject +
+        "&body=" + encodedBody;
 
-      document.getElementById("gmail").href = gmailURL;
+
+      document.getElementById("gmailLink").href =
+        gmailURL;
 
 
       /*
-        OUTLOOK
+        OUTLOOK WEB
       */
 
       const outlookURL =
-        `https://outlook.live.com/mail/0/deeplink/compose?to=${encodeURIComponent(email)}&subject=${encodedSubject}&body=${encodedBody}`;
+        "https://outlook.live.com/mail/0/deeplink/compose" +
+        "?to=" + encodeURIComponent(email) +
+        "&subject=" + encodedSubject +
+        "&body=" + encodedBody;
 
-      document.getElementById("outlook").href = outlookURL;
 
-
-      /*
-        GENERIC BROWSER MAIL
-        Uses Gmail as the most universally available web option.
-      */
-
-      document.getElementById("browserMail").href = gmailURL;
+      document.getElementById("outlookLink").href =
+        outlookURL;
 
     }
 
 
-    function goBack() {
+    /*
+      Detect which language button
+      was most recently clicked.
 
-      document.getElementById("emailOptions").style.display = "none";
-      document.getElementById("languageSelection").style.display = "block";
+      This lets the fallback options
+      use the correct language.
+    */
 
-      document.getElementById("copyMessage").style.display = "none";
+    document.querySelectorAll(".language")[0]
+      .addEventListener("click", function() {
 
-    }
+        currentLanguage = "en";
 
+      });
+
+
+    document.querySelectorAll(".language")[1]
+      .addEventListener("click", function() {
+
+        currentLanguage = "pt";
+
+      });
+
+
+    /*
+      COPY EMAIL ADDRESS
+    */
 
     function copyEmail() {
 
-      navigator.clipboard.writeText(email)
-        .then(function() {
+      if (navigator.clipboard) {
 
-          const message =
-            document.getElementById("copyMessage");
+        navigator.clipboard.writeText(email)
+          .then(function() {
 
-          message.style.display = "block";
+            showCopiedMessage();
 
-          setTimeout(function() {
-            message.style.display = "none";
-          }, 2500);
+          })
+          .catch(function() {
 
-        })
-        .catch(function() {
+            fallbackCopy();
 
-          alert(
-            "Email: " + email
-          );
+          });
 
-        });
+      } else {
+
+        fallbackCopy();
+
+      }
+
+    }
+
+
+    function fallbackCopy() {
+
+      const textArea =
+        document.createElement("textarea");
+
+      textArea.value = email;
+
+      document.body.appendChild(textArea);
+
+      textArea.select();
+
+      document.execCommand("copy");
+
+      document.body.removeChild(textArea);
+
+      showCopiedMessage();
+
+    }
+
+
+    function showCopiedMessage() {
+
+      const message =
+        document.getElementById("copyMessage");
+
+      message.style.display = "block";
+
+
+      setTimeout(function() {
+
+        message.style.display = "none";
+
+      }, 2500);
 
     }
 
